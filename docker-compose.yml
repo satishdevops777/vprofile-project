@@ -17,15 +17,13 @@ services:
     ports:
       - "11211:11211"
 
-
   vpromq01:
     image: rabbitmq
     ports:
       - "15672:15672"
     environment:
-    -  RABBITMQ_DEFAULT_USER=guest
-    -  RABBITMQ_DEFAULT_PASS=guest
-
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
 
   vproapp:
     build:
@@ -45,7 +43,6 @@ services:
     ports:
       - "80:80"
 
-
 volumes:
-  - vprodbdata: {}
-  - vproappdata: {}
+  vprodbdata: {}
+  vproappdata: {}
